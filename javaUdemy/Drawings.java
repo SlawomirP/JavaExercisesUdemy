@@ -1,7 +1,7 @@
 package javaUdemy;
 
 public class Drawings {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 //        *
 //        **
 //        ***
@@ -9,8 +9,8 @@ public class Drawings {
 //        *****
         System.out.println("Task 1");
         int stars = 5;
-        for(int i = 1; i <= stars; i++) {
-            for(int j = 1; j <= i; j++ ) {
+        for (int i = 1; i <= stars; i++) {
+            for (int j = 1; j <= i; j++) {
                 System.out.print("*");
             }
             System.out.println();
@@ -21,12 +21,28 @@ public class Drawings {
 //                       ***
 //                      ****
 //                     *****
-        for(int i = 1; i <= stars; i++ ){
-            for(int j = stars; j >= i; j--){
+        for (int i = 1; i <= stars; i++) {
+            for (int j = stars; j >= i; j--) {
                 System.out.print(" ");
             }
-            for(int j = 1; j <= i; j++ ) {
+            for (int j = 1; j <= i; j++) {
                 System.out.print("*");
+            }
+            System.out.println();
+        }
+        System.out.println("Task 3");
+        for (int i = 1; i <= stars; i++) {
+            for (int j = stars - 1; j >= i; j--) {
+                System.out.print("|");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            for (int j = 1; j < i; j++) {
+                System.out.print("*");
+            }
+            for (int j = stars - 1; j >= i; j--) {
+                System.out.print("|");
             }
             System.out.println();
         }

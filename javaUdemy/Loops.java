@@ -25,6 +25,29 @@ public class Loops {
             System.out.print(i + " ");
         }
 
-        // 10 elements array 
+        // 10 elements array
+        System.out.println();
+        System.out.println("Task 4");
+        int arraySize = 10;
+
+        int [] arrayTen= new int [arraySize];
+        for(int i = 0; i < arrayTen.length; i++){
+            arrayTen[i] = i + 1;
+            System.out.print(arrayTen[i] + " ");
+        }
+        System.out.println();
+        for(int i = arrayTen.length - 1; i >= 0; i--){
+            System.out.print(arrayTen[i] + " ");
+        }
+
+        // add array elements
+        System.out.println();
+        System.out.println("Task 5");
+        int addResult = 0;
+
+        for(int i = 0; i < arrayTen.length; i++){
+            addResult += arrayTen[i];
+        }
+        System.out.println("Addition result is " + addResult);
     }
 }

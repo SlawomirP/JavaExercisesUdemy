@@ -31,6 +31,7 @@ public class Drawings {
             System.out.println();
         }
         System.out.println("Task 3");
+        
         for (int i = 1; i <= stars; i++) {
             for (int j = stars - 1; j >= i; j--) {
                 System.out.print("|");

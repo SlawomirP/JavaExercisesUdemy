@@ -11,7 +11,6 @@ public class TryYourLuck {
         Scanner scanner = new Scanner(System.in);
 
         int drawnNumber = r.nextInt(101);
-        System.out.println("cheat: " + drawnNumber);
         int attempts = 5;
 
         for(int i = 1; i <= attempts; i++){
@@ -25,7 +24,7 @@ public class TryYourLuck {
             } else {
                 System.out.println("Ups... your number is too high");
             }
-
         }
+        System.out.println("------------END-------------");
     }
 }

@@ -1,6 +1,4 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class MainIOEx {
@@ -18,10 +16,15 @@ public class MainIOEx {
             FileReader fileReader = new FileReader("/home/slawp/Pulpit/JavaEx/fragment.txt");
             BufferedReader bufferedReader = new BufferedReader(fileReader);
 
+            FileWriter fileWriter = new FileWriter("Copy.txt", true);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
 
             while ((readLine = bufferedReader.readLine()) != null) {
-                System.out.println(index + ". " +readLine);
-                index++;
+                System.out.println(readLine);
+
+                bufferedWriter.write(readLine + "\n");
+
 
 //                marksNumber += readLine.length();
 //                System.out.println("----Actual marks number is " + marksNumber);
@@ -29,7 +32,13 @@ public class MainIOEx {
 //                if (readLine.contains(yourText)){
 //                    System.out.println(readLine);
 //                }
+
             }
+
+            bufferedReader.close();
+            bufferedWriter.close();
+            scanner.close();
+
         } catch (IOException e) {
             System.out.println("File error !!");
         }
